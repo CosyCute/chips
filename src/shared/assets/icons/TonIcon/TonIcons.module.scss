@@ -1,0 +1,48 @@
+.TonIcon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TonIcon.blue_type {
+  background: var(--ton-blue-color);
+}
+
+.TonIcon.white_type {
+  background: white;
+}
+
+.TonIcon.black_type {
+  background: var(--main-black);
+}
+
+.TonIcon.size_s {
+  height: 16px;
+  width: 16px;
+
+  svg {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+.TonIcon.size_m {
+  height: 24px;
+  width: 24px;
+
+  svg {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.TonIcon.size_l {
+  height: 32px;
+  width: 32px;
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+}

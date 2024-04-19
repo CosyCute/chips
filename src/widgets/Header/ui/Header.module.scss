@@ -1,0 +1,24 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications {
+    position: relative;
+    .newNotification {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        background: var(--main-red);
+        border-radius: 50%;
+    }
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
