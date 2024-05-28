@@ -1,0 +1,103 @@
+.HomePage {
+    background: var(--bg-primary-color);
+}
+
+.accentText {
+    color: var(--accent-color);
+}
+
+.textHeading {
+    font-size: var(--font-size-m-heading);
+}
+
+.profile {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--bg-accent-color);
+    .profileHeading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .secondaryText {
+            color: var(--text-secondary-color);
+        }
+    }
+
+    .referrals {
+        font: var(--font-s);
+        white-space: nowrap;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        .referralsInvited {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .referralsIncome {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    }
+    .depositWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .deposit {
+        cursor: pointer;
+        font: var(--font-s);
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        svg {
+            height: 15px;
+            width: 15px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 20px;
+    background: #303543;
+    //background: rgb(33,33,33);
+    .buttonOutlined {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 8px;
+        border-radius: 12px;
+        .icon {
+            margin-left: 4px;
+            display: flex;
+        }
+        .buttonText {
+            display: flex;
+            flex-direction: column;
+            p {
+                font-weight: 500;
+                line-height: 20px;
+                font: var(--font-s);
+            }
+            span {
+                color: var(--text-secondary-color);
+                font: var(--font-xs);
+                line-height: 20px;
+            }
+        }
+        .chevron {
+            margin-left: auto;
+        }
+    }
+}

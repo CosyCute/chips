@@ -9,7 +9,6 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'prettier',
-        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -19,11 +18,17 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'simple-import-sort',
+    ],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        indent: ['error', 4, { SwitchCase: 1 }],
+        indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -33,7 +38,7 @@ module.exports = {
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': 'off',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
@@ -46,17 +51,32 @@ module.exports = {
                 ignoreAttribute: [
                     'data-testid',
                     'to',
-                    'alt',
                     'direction',
                     'variant',
+                    'alt',
+                    'size',
+                    'justifyContent',
+                    'alignItems',
+                    'gap',
+                    'flexDirection',
                 ],
             },
         ],
+        'max-len': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies,
+        'no-param-reassign': 'off',
         'react/button-has-type': 'off',
         'object-curly-newline': 'off',
-        'max-len': 'off',
         'arrow-body-style': 'off',
         'no-return-await': 'off',
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
+        'import/first': 'error',
+        'import/newline-after-import': 'error',
+        'import/no-duplicates': 'error',
     },
     globals: {
         __IS_DEV__: true,
@@ -66,6 +86,36 @@ module.exports = {
             files: ['**/src/**/*.test.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
+            },
+        },
+        {
+            files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
+            rules: {
+                'simple-import-sort/imports': [
+                    'error',
+                    {
+                        groups: [
+                            ['^react', '^@?\\w'],
+                            // Internal packages.
+                            [
+                                '^app(/.*|$)',
+                                '^pages(/.*|$)',
+                                '^widgets(/.*|$)',
+                                '^features(/.*|$)',
+                                '^entities(/.*|$)',
+                                '^shared(/.*|$)',
+                            ],
+                            // Side effect imports.
+                            ['^\\u0000'],
+                            // Parent imports. Put `..` last.
+                            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                            // Other relative imports. Put same-folder imports and `.` last.
+                            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                            // Style imports.
+                            ['^.+\\.?(css)$'],
+                        ],
+                    },
+                ],
             },
         },
     ],

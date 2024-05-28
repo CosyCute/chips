@@ -1,0 +1,31 @@
+.DepositPage {
+  .balance {
+    min-width: 160px;
+
+    .balanceHeader {
+      width: 100%;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      width: 100%;
+      span {
+        width: 88px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.depositBlock {
+  width: 100%;
+  margin-top: 40px;
+
+  .clampedAddress {
+    color: var(--text-accent-color);
+  }
+
+  .address {
+    width: 100%;
+  }
+}

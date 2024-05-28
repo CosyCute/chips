@@ -1,26 +1,39 @@
 :root {
+    /*Text*/
     --font-family-main: Inter, Serif;
+
+    --font-size-xs: 12px;
+    --font-size-xs-heading: 14px;
+    --font-line-xs: 20px;
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+
+    --font-size-s: 14px;
+    --font-size-s-heading: 16px;
+    --font-line-s: 22px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
 
     --font-size-m: 16px;
     --font-size-m-heading: 18px;
     --font-line-m: 24px;
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
 
-    --font-size-l: 24px;
-    --font-size-l-heading: 26px;
-
-    --font-line-l: 32px;
+    --font-size-l: 20px;
+    --font-size-l-heading: 22px;
+    --font-line-l: 28px;
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
-    --font-size-xl: 32px;
-    --font-size-xl-heading: 34px;
-
-    --font-line-xl: 40px;
+    --font-size-xl: 24px;
+    --font-size-xl-heading: 26px;
+    --font-line-xl: 32px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
-    --navbar-height: 50px;
+    /*Sizes*/
+    --navbar-height: 104px;
+    --header-height: 69px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
+    --square-button-size: 48px;
+    --back-header-mt: 20px;
 
     /*Colors*/
     --bg-primary-color: #232427;
@@ -29,8 +42,14 @@
     --text-primary-color: #ffffff;
     --text-secondary-color: #979797;
     --text-accent-color: #6b7aff;
+    --accent-color: #6b7aff;
     --ton-blue-color: #3b86c6;
     --main-red: #ff0000;
     --main-black: #000;
     --main-white: #fff;
+    --icon-secondary-color: #616161;
+
+    /*Borders*/
+    --border-primary: 1px solid var(--border-accent-color);
+    --select-border-radius: 8px;
 }

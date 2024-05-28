@@ -1,9 +1,9 @@
 import { UserConfig } from 'vite';
 
-import { ConfigOptions } from './types';
-import { configResolvers } from './resolvers';
-import { configPlugins } from './plugins';
 import { configBuild } from './build';
+import { configPlugins } from './plugins';
+import { configResolvers } from './resolvers';
+import { ConfigOptions } from './types';
 
 export const viteConfig = (options: ConfigOptions): UserConfig => {
     const { paths } = options;
@@ -14,6 +14,7 @@ export const viteConfig = (options: ConfigOptions): UserConfig => {
         resolve: configResolvers(options.paths),
         plugins: configPlugins(),
         server: {
+            open: '/home',
             port: options.port,
         },
         build: configBuild(options),

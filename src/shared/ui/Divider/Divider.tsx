@@ -1,5 +1,7 @@
 import { FC } from 'react';
+
 import { classNames } from 'shared/lib/classNames';
+
 import classes from './Divider.module.scss';
 
 export type DividerDirection = 'horizontal' | 'vertical';
@@ -13,7 +15,7 @@ interface DividerProps {
 export const Divider: FC<DividerProps> = ({
     className,
     direction = 'horizontal',
-    indent = 20,
+    indent = 0,
 }) => {
     const indentNumber =
         typeof indent === 'number'

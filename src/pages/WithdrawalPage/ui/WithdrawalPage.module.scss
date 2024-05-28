@@ -1,0 +1,24 @@
+.WithdrawalPage {
+  min-height: 100%;
+  .withdrawalAmount {
+    margin-top: 40px;
+  }
+  .crumbs {
+    margin-top: 10px;
+  }
+  .info {
+    margin-top: 30px;
+  }
+  .withdrawalAddress {
+    margin-top: 30px;
+    padding: 20px;
+    border: var(--border-primary);
+    border-radius: 10px;
+    .clampedAddress {
+      width: 100%;
+    }
+  }
+  .withdrawButton {
+    margin-top: auto;
+  }
+}

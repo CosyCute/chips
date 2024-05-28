@@ -1,5 +1,6 @@
-import type { Preview } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
+import type { Preview } from '@storybook/react';
+
 import '../../src/app/styles/index.scss';
 
 const preview: Preview = {

@@ -1,0 +1,28 @@
+.Button {
+  padding: 16px 0;
+  border-radius: 15px;
+}
+
+.Button.contained {
+  background: var(--accent-color);
+}
+
+.Button.clear {
+  padding: 0;
+}
+
+.Button.outlined {
+  border: var(--border-primary);
+}
+
+.Button.square {
+  border: var(--border-primary);
+  border-color: var(--main-white);
+  border-radius: 10px;
+  height: var(--square-button-size);
+  width: var(--square-button-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-accent-color);
+}

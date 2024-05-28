@@ -1,0 +1,24 @@
+.Select {
+  margin-top: 60px;
+  border: var(--border-primary);
+  border-radius: var(--select-border-radius);
+  transition-duration: 200ms;
+  .selectItem {
+    min-height: 50px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-bottom: var(--border-primary);
+    path {
+      fill: var(--accent-color) !important;
+    }
+    &:first-child {
+      border-top-left-radius: var(--select-border-radius);
+      border-top-right-radius: var(--select-border-radius);
+    }
+    &:last-child {
+      border-bottom-left-radius: var(--select-border-radius);
+      border-bottom-right-radius: var(--select-border-radius);
+      border: none;
+    }
+  }
+}

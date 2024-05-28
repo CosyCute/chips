@@ -1,5 +1,6 @@
-import vite, { ResolveOptions } from 'vite';
 import path from 'path';
+import vite, { ResolveOptions } from 'vite';
+
 import { ConfigPath } from './types';
 
 export const configResolvers = (

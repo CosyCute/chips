@@ -1,0 +1,48 @@
+.Input {
+  height: 40px;
+  width: 100%;
+  color: var(--text-primary-color);
+}
+
+.Input.underline {
+  border-bottom: var(--border-primary);
+}
+
+.inputWrapper {
+  position: relative;
+  >div {
+    width: 100%;
+  }
+}
+
+.icon {
+  position: absolute;
+}
+
+input[type=range] {
+  width: 100%;
+  accent-color: var(--accent-color);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: red;
+}
+
+input[type=range]:focus {
+  outline: none;
+  background: red;
+
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: red;
+  border-color: transparent;
+  color: transparent;
+}
+
+.rangeNumbers {
+  margin-top: -8px;
+}

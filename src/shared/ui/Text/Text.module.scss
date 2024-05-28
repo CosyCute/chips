@@ -1,0 +1,59 @@
+.Text {
+}
+
+.Text.primary {
+  color: var(--text-primary-color);
+}
+
+.Text.secondary {
+  color: var(--text-secondary-color);
+}
+
+
+.Text.xs {
+  font: var(--font-xs);
+
+  &.heading {
+    font-size: var(--font-size-xs-heading);
+  }
+}
+
+.Text.s {
+  font: var(--font-s);
+
+  &.heading {
+    font-size: var(--font-size-s-heading);
+  }
+}
+
+.Text.m {
+  font: var(--font-m);
+
+  &.heading {
+    font-size: var(--font-size-m-heading);
+  }
+}
+
+.Text.l {
+  font: var(--font-l);
+
+  &.heading {
+    font-size: var(--font-size-l-heading);
+  }
+}
+
+.Text.xl {
+  font: var(--font-xl);
+
+  &.heading {
+    font-size: var(--font-size-xl-heading);
+  }
+}
+
+.heading {
+  font-weight: 500;
+}
+
+.accent {
+  color: var(--text-accent-color);
+}

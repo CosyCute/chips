@@ -1,5 +1,8 @@
 import { FC } from 'react';
+
 import { classNames } from 'shared/lib/classNames';
+import { Flex } from 'shared/ui/Flex';
+
 import classes from './ChevronIcon.module.scss';
 
 export type ChevronIconDirection = 'left' | 'right' | 'up' | 'down';
@@ -12,11 +15,11 @@ interface ChevronIconProps {
 
 export const ChevronIcon: FC<ChevronIconProps> = ({
     className,
-    direction = 'left',
+    direction = 'right',
     isAccent = true,
 }) => {
     return (
-        <div
+        <Flex
             className={classNames(
                 classes.ChevronIcon,
                 { [classes[direction]]: true },
@@ -38,6 +41,6 @@ export const ChevronIcon: FC<ChevronIconProps> = ({
                     strokeLinejoin="round"
                 />
             </svg>
-        </div>
+        </Flex>
     );
 };

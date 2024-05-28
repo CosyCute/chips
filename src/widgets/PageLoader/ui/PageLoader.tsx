@@ -1,6 +1,9 @@
 import type { FC } from 'react';
-import { Loader } from 'shared/ui/Loader';
+
 import { classNames } from 'shared/lib/classNames';
+import { Flex } from 'shared/ui/Flex';
+import { Loader } from 'shared/ui/Loader';
+
 import classes from './PageLoader.module.scss';
 
 interface PageLoaderProps {
@@ -8,7 +11,12 @@ interface PageLoaderProps {
 }
 
 export const PageLoader: FC<PageLoaderProps> = ({ className }) => (
-    <div className={classNames(classes.PageLoader, {}, [className])}>
+    <Flex
+        justifyContent="center"
+        alignItems="center"
+        flexGrow={1}
+        className={classNames(classes.PageLoader, {}, [className])}
+    >
         <Loader />
-    </div>
+    </Flex>
 );

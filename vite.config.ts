@@ -1,5 +1,6 @@
-import { defineConfig, UserConfig } from 'vite';
 import path from 'path';
+import { defineConfig, UserConfig } from 'vite';
+
 import { ConfigMode, ConfigPath, viteConfig } from './config';
 
 const rootPath = process.cwd();
@@ -10,7 +11,6 @@ export default defineConfig(async (): Promise<UserConfig> => {
     const isDev = mode === 'development';
     const paths: ConfigPath = {
         src: path.resolve(rootPath, 'src'),
-        dev: path.resolve(rootPath, '.dev'),
         publicDir: path.resolve(rootPath, 'public'),
         root: rootPath,
     };

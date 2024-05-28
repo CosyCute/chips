@@ -1,0 +1,13 @@
+.BackHeader {
+  margin-top: var(--back-header-mt);
+  .backButton {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 32px;
+  }
+  .title {
+    max-width: 180px;
+    text-align: center;
+  }
+}

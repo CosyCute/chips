@@ -1,0 +1,19 @@
+.Navbar {
+  background: var(--bg-primary-color);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 20px;
+
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .key {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+}

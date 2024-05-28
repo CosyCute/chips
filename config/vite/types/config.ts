@@ -2,7 +2,6 @@ export type ConfigMode = 'development' | 'production';
 
 export interface ConfigPath {
     src: string;
-    dev: string;
     publicDir: string;
     root: string;
 }
